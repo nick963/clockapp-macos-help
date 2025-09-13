@@ -39,3 +39,7 @@ The app comes with preloaded clocks. Each one can be selected and viewed without
 ### Viewing JSON
 
 Use the <string>JSON → Show JSON…</strong> You can inspect and learn from the existing JSON. You can also copy the JSON to the <strong>Clipboard</string>.
+
+### Troubleshooting
+
+If a clock fails to load, ensure the JSON file conforms to the expected schema. The JSON panel can help debug issues.
