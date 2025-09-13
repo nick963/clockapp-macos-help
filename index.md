@@ -2,14 +2,13 @@
 # MyClockApp Help
 ## MyClockAppHelp
 
-[Getting Started](#getting_started)
-[Moving the Window](#moving-the-window)
-[Resizing the Window](#resizing-the-window)
-[Opening Clocks](#openint-clocks
-Built-in Clocks](#built-in-clocks)
-Viewing Clock JSON](#viewing-json)
-[Troubleshooting](#troubleshooting)
-
+1. [Getting Started](#getting_started)
+2. [Moving the Window](#moving-the-window)
+3. [Resizing the Window](#resizing-the-window)
+4. [Opening Clocks](#openint-clocks
+5. [Built-in Clocks](#built-in-clocks)
+6. [Viewing Clock JSON](#viewing-json)
+7. [Troubleshooting](#troubleshooting)
 
 ### Getting Started
 
@@ -19,7 +18,7 @@ MyClockApp displays clocks in a circular window. You can move, resize, and load 
 
 Click and drag anywhere inside the circular window to move it around the screen.
 
-###Resizing the Window
+### Resizing the Window
 
 Hold <kbd>Shift</kbd> and click-drag to resize the window. The window maintains a square aspect ratio.
 
