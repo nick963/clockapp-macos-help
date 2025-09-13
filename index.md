@@ -1,6 +1,6 @@
 
 # JSON Clock Help
-## JSON Clock App Helk
+## JSON Clock App Help
 
 ![Retro Black: Mid-century modern black clock.](image256x256px.png)
 
