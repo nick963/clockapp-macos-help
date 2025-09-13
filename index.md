@@ -2,6 +2,8 @@
 # JSON Clock Help
 ## JSON Clock App Helk
 
+![Retro Black: Mid-century modern black clock.](image256x256px.png)
+
 1. [Getting Started](#getting_started)
 2. [Moving the Window](#moving-the-window)
 3. [Resizing the Window](#resizing-the-window)
@@ -24,7 +26,11 @@ Hold <kbd>Shift</kbd> and click-drag to resize the window. Expand the window by 
 
 ### Opening Clocks
 
-Use <strong>File → Open…</strong> to load additional clocks that conform to the app’s schema.
+When opening a JSON file it must conform to the app's schem.
+
+1. Use <strong>File → Open…</strong> to load additional clocks.
+2. Use the Finder to drag-n-drop a file onto the clock.
+3. Right click on the clock to easily load additional clocks.
 
 ### Built-in Clocks
 
@@ -32,4 +38,4 @@ The app comes with preloaded clocks. Each one can be selected and viewed without
 
 ### Viewing JSON
 
-Use the <string>JSON → Open…</strong> to load additional clocks that conform to the app’s schema. You can inspect and learn from the existing JSON.
+Use the <string>JSON → Show JSON…</strong> You can inspect and learn from the existing JSON. You can also copy the JSON to the <strong>Clipboard</string>.
