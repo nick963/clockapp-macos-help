@@ -28,7 +28,7 @@ Hold <kbd>Shift</kbd> and click-drag to resize the window. Expand the window by 
 
 When opening a JSON file it must conform to the app's schema.
 
-1. Use <strong>File → Open…</strong> to load clocks written in the [JSON schema](https://github.com/nick963/clockapp-macos-help/blob/main/json_format.json).
+1. Use <strong>File → Open…</strong> to load clocks written in the clock's [JSON format](https://github.com/nick963/clockapp-macos-help/blob/main/json_format.md).
 2. Use the Finder to drag-n-drop a file onto the clock.
 3. Right click on the clock to easily load additional clocks.
 
