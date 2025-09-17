@@ -1,14 +1,41 @@
-## JSON Schema
+## JSON Format
 
-The schema to define clocks in JSON is minimal:
+The clock's JSON format is minimal. Here is a basic example:
 
 ```json
 {
   "name": "Name of Clock",
-  "clock_face": [],
-  "second_hand": [],
-  "minute_hand": [],
-  "hour_hand": []
+  "description": "Description of the clock."
+  "clock_face": [
+  {
+      "shape": "circle",
+      "circle_radius": 1,
+      "x": 0.0,
+      "y": 0.0,
+      "color": "#FFFFFF"}
+  ],
+  "second_hand": [
+  {
+      "shape": "rectangle",
+      "color": "#FF0000",
+      "rectangle_fx": -0.01, "rectangle_fy": -0.99,
+      "rectangle_tx":  0.01, "rectangle_ty":  0.10
+    }
+  ],
+  "minute_hand": [
+    {
+      "shape": "rectangle",
+      "rectangle_fx": -0.016, "rectangle_fy": -0.99,
+      "rectangle_tx":  0.016, "rectangle_ty":  0.10
+    }
+  ],
+  "hour_hand": [
+    {
+      "shape": "rectangle",
+      "rectangle_fx": -0.016, "rectangle_fy": -0.69,
+      "rectangle_tx":  0.016, "rectangle_ty":  0.10
+    }
+  ]
 }
 ```
 

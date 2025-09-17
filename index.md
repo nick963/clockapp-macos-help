@@ -14,11 +14,11 @@
 
 ### Getting Started
 
-JSON Clock displays clocks in a circular window. You can move, resize, and load clocks in JSON format.
+JSON Clock displays clocks in a circular window. You can move, resize, and load clock's in [JSON format](https://github.com/nick963/clockapp-macos-help/blob/main/json_format.md).
 
 ### Moving the Window
 
-Click and drag anywhere inside the circular window to move it around the screen.
+Click and drag anywhere on the clock face to move it around the screen.
 
 ### Resizing the Window
 
@@ -42,4 +42,4 @@ Use the <string>JSON → Show JSON…</strong> You can inspect and learn from th
 
 ### Troubleshooting
 
-If a clock fails to load, ensure the JSON file conforms to the expected schema. The JSON panel can help debug issues.
+If a clock fails to load, ensure the JSON file conforms to the expected [format](https://github.com/nick963/clockapp-macos-help/blob/main/json_format.md). The JSON panel can help debug issues.
