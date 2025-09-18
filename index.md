@@ -28,9 +28,9 @@ Hold <kbd>Shift</kbd> and click-drag to resize the window. Expand the window by 
 
 When opening a JSON file it must conform to the app's schema.
 
-1. Use <strong>File → Open…</strong> to load clocks written in the clock's [JSON format](https://github.com/nick963/clockapp-macos-help/blob/main/json_format.md).
-2. Use the Finder to drag-n-drop a file onto the clock.
-3. Right click on the clock to easily load additional clocks.
+1. Right click on the clock face to update the look of the clock.
+2. Use <strong>File → Open…</strong> to load clocks written in the clock's [JSON format](https://github.com/nick963/clockapp-macos-help/blob/main/json_format.md).
+3. Use the Finder to drag-n-drop a file onto the clock.
 
 ### Built-in Clocks
 
@@ -42,4 +42,4 @@ Use the <string>JSON → Show JSON…</strong> You can inspect and learn from th
 
 ### Troubleshooting
 
-If a clock fails to load, ensure the JSON file conforms to the expected [format](https://github.com/nick963/clockapp-macos-help/blob/main/json_format.md). The JSON panel can help debug issues.
+If a clock fails to load, ensure the JSON file conforms to the expected [format](https://github.com/nick963/clockapp-macos-help/blob/main/json_format.md). Loading error messages may help debug JSON issues.
