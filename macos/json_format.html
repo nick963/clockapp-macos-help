@@ -1,0 +1,188 @@
+<HTML>
+<body>
+<h2 class="code-line" data-line-start=0 data-line-end=1 ><a id="JSON_Format_0"></a>JSON Format</h2>
+<p class="has-line-data" data-line-start="2" data-line-end="3">The clock JSON format is minimal. Here is a basic example:</p>
+<pre><code class="has-line-data" data-line-start="5" data-line-end="40" class="language-json">{
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Name of Clock"</span></span>,
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Description of the clock."</span>
+  <span class="hljs-string">"clock_face"</span>: [
+  {
+      "<span class="hljs-attribute">shape</span>": <span class="hljs-value"><span class="hljs-string">"circle"</span></span>,
+      "<span class="hljs-attribute">circle_radius</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">x</span>": <span class="hljs-value"><span class="hljs-number">0.0</span></span>,
+      "<span class="hljs-attribute">y</span>": <span class="hljs-value"><span class="hljs-number">0.0</span></span>,
+      "<span class="hljs-attribute">color</span>": <span class="hljs-value"><span class="hljs-string">"#FFFFFF"</span></span>}
+  ]</span>,
+  "<span class="hljs-attribute">second_hand</span>": <span class="hljs-value">[
+  {
+      "<span class="hljs-attribute">shape</span>": <span class="hljs-value"><span class="hljs-string">"rectangle"</span></span>,
+      "<span class="hljs-attribute">color</span>": <span class="hljs-value"><span class="hljs-string">"#FF0000"</span></span>,
+      "<span class="hljs-attribute">rectangle_fx</span>": <span class="hljs-value">-<span class="hljs-number">0.01</span></span>, "<span class="hljs-attribute">rectangle_fy</span>": <span class="hljs-value">-<span class="hljs-number">0.99</span></span>,
+      "<span class="hljs-attribute">rectangle_tx</span>":  <span class="hljs-value"><span class="hljs-number">0.01</span></span>, "<span class="hljs-attribute">rectangle_ty</span>":  <span class="hljs-value"><span class="hljs-number">0.10</span>
+    </span>}
+  ]</span>,
+  "<span class="hljs-attribute">minute_hand</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">shape</span>": <span class="hljs-value"><span class="hljs-string">"rectangle"</span></span>,
+      "<span class="hljs-attribute">rectangle_fx</span>": <span class="hljs-value">-<span class="hljs-number">0.016</span></span>, "<span class="hljs-attribute">rectangle_fy</span>": <span class="hljs-value">-<span class="hljs-number">0.99</span></span>,
+      "<span class="hljs-attribute">rectangle_tx</span>":  <span class="hljs-value"><span class="hljs-number">0.016</span></span>, "<span class="hljs-attribute">rectangle_ty</span>":  <span class="hljs-value"><span class="hljs-number">0.10</span>
+    </span>}
+  ]</span>,
+  "<span class="hljs-attribute">hour_hand</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">shape</span>": <span class="hljs-value"><span class="hljs-string">"rectangle"</span></span>,
+      "<span class="hljs-attribute">rectangle_fx</span>": <span class="hljs-value">-<span class="hljs-number">0.016</span></span>, "<span class="hljs-attribute">rectangle_fy</span>": <span class="hljs-value">-<span class="hljs-number">0.69</span></span>,
+      "<span class="hljs-attribute">rectangle_tx</span>":  <span class="hljs-value"><span class="hljs-number">0.016</span></span>, "<span class="hljs-attribute">rectangle_ty</span>":  <span class="hljs-value"><span class="hljs-number">0.10</span>
+    </span>}
+  ]
+</span>}
+</code></pre>
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th>clock object keys</th>
+        <th>key description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>name</td>
+        <td>Name of the clock.</td>
+    </tr>
+    <tr>
+        <td>description</td>
+        <td>Description of the clock.</td>
+    </tr>
+    <tr>
+        <td>clock_face</td>
+        <td>List of shapes for the clock face.</td>
+    </tr>
+    <tr>
+        <td>second_hand</td>
+        <td>List of shapes for the second hand. It should be oriented towards 12:00 and will be rotated.</td>
+    </tr>
+    <tr>
+        <td>minute_hand</td>
+        <td>List of shapes for the minute hand.</td>
+    </tr>
+    <tr>
+        <td>hour_hand</td>
+        <td>List of shapes for the hour hand.</td>
+    </tr>
+    </tbody>
+</table>
+<h3 class="code-line" data-line-start=50 data-line-end=51 ><a id="JSON_Shapes_Schema_50"></a>JSON Shapes Schema</h3>
+<h4 class="code-line" data-line-start=52 data-line-end=53 ><a id="Key_Characteristics_of_the_Coordinate_System_52"></a>Key Characteristics of the Coordinate System</h4>
+<ul>
+    <li class="has-line-data" data-line-start="54" data-line-end="55"><strong>Origin</strong>: The origin is in the center of the clock face.</li>
+    <li class="has-line-data" data-line-start="55" data-line-end="57"><strong>X-axis</strong>: The x-values increase as you move to the right. This is the same as a standard Cartesian coordinate<br>
+        system.</li>
+    <li class="has-line-data" data-line-start="57" data-line-end="60"><strong>Y-axis</strong>: The y-values increase as you move down. This is the opposite of a standard Cartesian system, where<br>
+        y-values<br>
+        increase as you move up. This is consistent with computer screens and visual displays.</li>
+    <li class="has-line-data" data-line-start="60" data-line-end="63"><strong>Drawing Area</strong>: The radius of the clock face is 1.0. The application will scale that clock if the user increases the<br>
+        size.</li>
+</ul>
+<p class="has-line-data" data-line-start="63" data-line-end="64"><img src="./Coords.png" alt="image"></p>
+<p class="has-line-data" data-line-start="65" data-line-end="66">There are 4 shapes that can be used to construct the clocks: “rectangle”, “polygon”, “text”, “circle”, "text_ticks".</p>
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th>shape object keys</th>
+        <th>key description</th>
+        <th>applicable shapes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>shape</td>
+        <td>String with the following possible string values: "rectangle", "polygon", "text", "circle", "text_ticks".</td>
+        <td>all</td>
+    </tr>
+    <tr>
+        <td>x</td>
+        <td>x position of the shape.</td>
+        <td>all but polygon</td>
+    </tr>
+    <tr>
+        <td>y</td>
+        <td>y position of the shape.</td>
+        <td>all but polygon</td>
+    </tr>
+    <tr>
+        <td>color</td>
+        <td>shape color either format #RRGGBB or #AARRGGBB when alpha channel is desireed.</td>
+        <td>all</td>
+    </tr>
+    <tr>
+        <td>ticks</td>
+        <td>The shape will repeat around the clock the number of ticks (whole number &gt;= 2 and &lt;= 60).</td>
+        <td>all</td>
+    </tr>
+    <tr>
+        <td>text</td>
+        <td>text string to draw.</td>
+        <td>text</td>
+    </tr>
+    <tr>
+        <td>text_font</td>
+        <td>font for text.</td>
+        <td>text, text_ticks</td>
+    </tr>
+    <tr>
+        <td>text_size</td>
+        <td>font size for text. The clock radius is always 1.0.<br>
+            “size”: 0.15 means that at a 200×200 pixel window, the rendered font size will be 15px.
+            <br>Larger window sizes scale the font proportionally.
+        </td>
+        <td>text, text_ticks</td>
+    </tr>
+    <tr>
+        <td>text_styles</td>
+        <td>font styles for text (separated by commas): "bold" or "italic".</td>
+        <td>text, text_ticks</td>
+    </tr>
+    <tr>
+        <td>text_rotation</td>
+        <td>rotation of the text (number &gt; 0 and &lt; 1.0). 0.25 is 3:00, 0.50 is 6:00, 0.75 is 9:00.</td>
+        <td>text, text_ticks</td>
+    </tr>
+    <tr>
+        <td>text_ticks_elements</td>
+        <td>array of strings to be evenly spaced out around the clock starting in the "noon" position.</td>
+        <td>text_ticks</td>
+    </tr>
+    <tr>
+        <td>circle_radius</td>
+        <td>radius of the circle.</td>
+        <td>circle</td>
+    </tr>
+    <tr>
+        <td>rectangle_fx</td>
+        <td>from x position of the rectangle (number &gt;= -1.0 and &lt;= 1.0).</td>
+        <td>rectangle</td>
+    </tr>
+    <tr>
+        <td>rectangle_fy</td>
+        <td>from y position of the rectangle (number &gt;= -1.0 and &lt;= 1.0).</td>
+        <td>rectangle</td>
+    </tr>
+    <tr>
+        <td>rectangle_tx</td>
+        <td>to x position of the rectangle (number &gt;= -1.0 and &lt;= 1.0).</td>
+        <td>rectangle</td>
+    </tr>
+    <tr>
+        <td>rectangle_ty</td>
+        <td>to y position of the rectangle (number &gt;= -1.0 and &lt;= 1.0).</td>
+        <td>rectangle</td>
+    </tr>
+    <tr>
+        <td>polygon_points</td>
+        <td>list of points. Each point is a JSON object with x and y key-values.</td>
+        <td>polygon</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</HTML>
